@@ -25,8 +25,8 @@ function error() {
 
 function showWeather(weather) {
     showTemp(weather.currently.temperature, options.metric);
-    $("#cloud").text("Cloud: " + weather.currently.cloudCover + "%");
-    $("#humidity").text("Humidity: " + weather.currently.humidity  + "%");
+    $("#cloud").text("Cloud: " + weather.currently.cloudCover*100 + "%");
+    $("#humidity").text("Humidity: " + weather.currently.humidity*100  + "%");
     $("#wind").text("Wind: " + weather.currently.windSpeed  + "m/s");
     $("#desc").text(weather.currently.summary);
     $(".weather-type i").removeClass().addClass("wi wi-forecast-io-" + weather.currently.icon);
@@ -45,7 +45,8 @@ function getLocation() {
 }
 
 function getWeather(lat, lon) {
-    var url = "https://api.darksky.net/forecast/" + apikey + "/" + lat + "," + lon + "?units=si&exclude=minutely,hourly,daily,alerts,flags";
+    var url = "https://api.darksky.net/forecast/" + apikey + "/" + lat + "," + lon +
+        "?units=si&exclude=minutely,hourly,daily,alerts,flags&callback=?";
     $.getJSON({
         url: url,
         success: showWeather,
