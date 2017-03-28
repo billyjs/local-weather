@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Weather</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" rel="stylesheet">
+    <link href="./style.css" type="text/css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <div class="weather-type">
+                <i class="wi"></i>
+                <p id="desc"></p>
+            </div>
+            <div class="temp">
+                <h1><span id="temp"></span><span id="units"></span></h1>
+            </div>
+            <div class="weather-info">
+                <p><span id="cloud"></span></p>
+                <p><span id="humidity"></span></p>
+                <p><span id="wind"></span></p>
+            </div>
+        </div>
+
+        <div class="card-tabs">
+            <div class="left-tabs">
+                <div class="tab linkedin-tab">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </div>
+                <div class="tab github-tab">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="right-tabs">
+                <div class="tab units-tab">
+                    °F
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
