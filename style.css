@@ -94,10 +94,19 @@ body {
     background-color: #1ABC9C;
 }
 
+.darksky-tab {
+    background-color: white;
+    height: 18px;
+}
+
 .weather-type {
     text-align: center;
 }
 
 .temp {
     font-size: 2em;
+}
+
+img {
+    height: 18px;
 }
